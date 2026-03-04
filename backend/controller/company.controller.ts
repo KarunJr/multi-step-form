@@ -95,8 +95,8 @@ export async function getDraftCompany(req: Request, res: Response) {
       success: true,
       company,
     });
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error("Error in getDraftCompany(): ", error);
     return res.status(500).json({ success: false, message: "Server error" });
   }
 }
@@ -148,17 +148,15 @@ export async function getAllCompanies(req: Request, res: Response) {
       }
     });
     const companies = Object.values(companiesMap);
-    console.log("Companies:", companies);
     return res.status(201).json({ success: true, companies });
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error("Error in getAllCompanies(): ",error);
     return res.status(500).json({ success: false, message: "Server error" });
   }
 }
 
 export async function addShareholders(req: Request, res: Response) {
   const { shareholders, company_id } = req.body;
-  console.log("Request from body:", { shareholders, company_id });
   if (!shareholders || !Array.isArray(shareholders) || !company_id) {
     return res.status(400).json({
       success: false,

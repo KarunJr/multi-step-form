@@ -103,7 +103,6 @@ const Register = () => {
     updateFormData(updateData);
     if (isLastStep) {
       const companyDetails = JSON.parse(localStorage.getItem("companyDetails") || "{}");
-      console.log("CompanyDetails:", companyDetails);
 
       const response = await fetch("http://localhost:3000/shareholders", {
         method: "POST",

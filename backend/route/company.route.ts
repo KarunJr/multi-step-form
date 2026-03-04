@@ -11,6 +11,7 @@ const router = express.Router();
 
 router.get("/", getAllCompanies);
 router.get("/company/:id", getDraftCompany);
+
 router.post("/register", registerCompany);
 router.post("/shareholders", addShareholders);
 

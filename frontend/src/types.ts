@@ -37,10 +37,6 @@ export const companySchema = z
   );
 
 export type CompanySchema = z.infer<typeof companySchema>;
-// export type ShareholdersSchema = z.infer<typeof shareholdersSchema>;
-
-// export type StepFormData = CompanySchema | ShareholdersSchema;
-// export type AllFormFields = CompanySchema & ShareholdersSchema;
 
 export interface Step {
   id: string;

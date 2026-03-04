@@ -36,11 +36,6 @@ export function useMultipleForm() {
     setFormData((prev) => ({ ...prev, ...newData }));
   };
 
-  /** --- Handle final submission --- */
-  const submitForm = (data: CompanySchema) => {
-    console.log("Final submitted data", data);
-  };
-
   /** --- Reset the form entirely --- */
   const resetForm = () => {
     setFormData({});
@@ -58,7 +53,6 @@ export function useMultipleForm() {
     goToNextStep,
     goToPrevStep,
     updateFormData,
-    submitForm,
     resetForm,
   }
 }
