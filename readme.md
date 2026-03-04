@@ -36,6 +36,20 @@ npm install
 ```
 ### 4. Run the backend in development
 
+#### Database Setup
+Before starting the backend, make sure to create a database and update the credentials in `backend/database/db.ts`:
+
+- host, username, password, database name
+- Example: 
+
+```ts
+export const db = mysql.createPool({
+  host: "localhost",
+  user: "root",
+  password: "password",
+  database: "company_db"
+});
+```
 Go back to the backend folder:
 
 ```bash
