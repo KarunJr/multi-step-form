@@ -11,6 +11,11 @@ A **full-stack application** for company incorporation that allows users to:
 
 # Project Installation Guide
 
+## Requirements
+
+- Node.js >= 22.0.0
+- npm >= 9.0.0
+
 ## 1. Clone the repository
 
 ```bash
