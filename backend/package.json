@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/server.js",
     "build": "rimraf dist && tsc",
-    "dev": "concurrently \"tsc -w\" \"nodemon dist/server.js\"",
+    "dev": "tsx watch server.ts",
     "seed": "tsx database/seed.ts"
   },
   "keywords": [],
